@@ -14,14 +14,19 @@
   "logging": {
     "fileLoggingMode": "debugOnly",
     "logLevel": {
-      "Function.MyFunction": "Information",
-      "default": "None"
+      "default": "Information",
+      "Host.Results": "Error",
+      "Function": "Error",
+      "Host.Aggregator": "Information"
     },
     "applicationInsights": {
       "samplingSettings": {
         "isEnabled": true,
-        "maxTelemetryItemsPerSecond": 5
+        "maxTelemetryItemsPerSecond": 20
       }
+    },
+    "console": {
+      "isEnabled": "false"
     }
   },
   "singleton": {
