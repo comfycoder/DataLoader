@@ -6,7 +6,7 @@ namespace DataLoader.Services
     public interface ICompanyRepository
     {
         bool RecordExists(Company company);
-        void UpsertPerson(Company company);
+        void UpsertCompany(Company company);
         int SaveChanges();
         Task<int> SaveChangesAsync();
     }

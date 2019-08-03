@@ -39,7 +39,7 @@ namespace DataLoader
                     _companyRules.ApplyBusinessRules(company);
 
                     // Add the person record to a data set to be batch processed
-                    _companyRepository.UpsertPerson(company);
+                    _companyRepository.UpsertCompany(company);
                 }
                 catch (Exception ex)
                 {

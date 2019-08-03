@@ -16,13 +16,13 @@ namespace DataLoader.Services
 
         public bool RecordExists(Company company)
         {
-            var exists = _dbContext.People.AsNoTracking()
-               .Any(x => x.PersonId == company.CompanyId);
+            var exists = _dbContext.Companies.AsNoTracking()
+               .Any(x => x.CompanyId == company.CompanyId);
 
             return exists;
         }
 
-        public void UpsertPerson(Company company)
+        public void UpsertCompany(Company company)
         {
             if (RecordExists(company))
             {
