@@ -12,13 +12,7 @@
     "counterThreshold": 0.80
   },
   "logging": {
-    "fileLoggingMode": "debugOnly",
-    "logLevel": {
-      "default": "Information",
-      "Host.Results": "Error",
-      "Function": "Error",
-      "Host.Aggregator": "Information"
-    },
+    "fileLoggingMode": "always",
     "applicationInsights": {
       "samplingSettings": {
         "isEnabled": true,
