@@ -32,10 +32,10 @@ namespace DataLoader
 
             // TODO: Remove the following three lines as
             // they are only meant to test the poison queue
-            if (queueItem.BatchId.EndsWith("-3"))
-            {
-                throw new ApplicationException($"Bad data in Batch ID: {queueItem.BatchId}");
-            }
+            //if (queueItem.BatchId.EndsWith("-3"))
+            //{
+            //    throw new ApplicationException($"Bad data in Batch ID: {queueItem.BatchId}");
+            //}
 
             // Iterate over all person records in the incoming people message queue item
             foreach (var person in queueItem.People)
