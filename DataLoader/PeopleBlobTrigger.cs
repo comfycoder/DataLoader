@@ -39,6 +39,8 @@ namespace DataLoader
 
                 try
                 {
+                    csvReader.Configuration.RegisterClassMap<PersonMap>();
+
                     people = csvReader.GetRecords<Person>();
                 }
                 catch (Exception ex)
