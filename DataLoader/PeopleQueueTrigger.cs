@@ -54,10 +54,10 @@ namespace DataLoader
             {
                 // TODO: Remove the following three lines as
                 // they are only meant to test the poison queue
-                //if (queueItem.BatchId.EndsWith("-3"))
-                //{
-                //    throw new ApplicationException($"Bad data in Batch ID: {queueItem.BatchId}");
-                //}
+                if (queueItem.BatchId.EndsWith("-3"))
+                {
+                    throw new ApplicationException($"Bad data in Batch ID: {queueItem.BatchId}");
+                }
 
                 // Save all person records to the SQL Server database
                 await _personRepository.SaveChangesAsync();
