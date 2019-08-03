@@ -262,6 +262,8 @@ __pycache__/
 
 Properties/PublishProfiles/
 
+*.pubxml
+
 *.mine.*
 
 *.test.*
