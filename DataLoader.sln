@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLoader", "DataLoader\DataLoader.csproj", "{DED55AE8-47C2-44E5-9A8B-2BC022CF9751}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E8A6CD86-CF55-4F4D-BDE7-CB534FFC7C6A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LargeBlobData", "LargeBlobData", "{0798F941-723D-4C41-8290-DCEC4CC1EADC}"
+	ProjectSection(SolutionItems) = preProject
+		LargeBlobData\COMPANY_BLOB_DATA_20000.csv = LargeBlobData\COMPANY_BLOB_DATA_20000.csv
+		LargeBlobData\LARGE_BLOB_DATA_100.csv = LargeBlobData\LARGE_BLOB_DATA_100.csv
+		LargeBlobData\LARGE_BLOB_DATA_1000.csv = LargeBlobData\LARGE_BLOB_DATA_1000.csv
+		LargeBlobData\LARGE_BLOB_DATA_10000.csv = LargeBlobData\LARGE_BLOB_DATA_10000.csv
+		LargeBlobData\LARGE_BLOB_DATA_100000.csv = LargeBlobData\LARGE_BLOB_DATA_100000.csv
+		LargeBlobData\LARGE_BLOB_DATA_1000000.csv = LargeBlobData\LARGE_BLOB_DATA_1000000.csv
+		LargeBlobData\LARGE_BLOB_DATA_101.csv = LargeBlobData\LARGE_BLOB_DATA_101.csv
+		LargeBlobData\LARGE_BLOB_DATA_109.csv = LargeBlobData\LARGE_BLOB_DATA_109.csv
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PowerShell", "PowerShell", "{1C84E9C4-ABEC-48D8-BD5E-545E165DFE0B}"
+	ProjectSection(SolutionItems) = preProject
+		PowerShell\upload-blob-to-storage.ps1 = PowerShell\upload-blob-to-storage.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{DF134323-96BD-492A-8DAF-844B8CF8863C}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\Create_Company_Table.sql = SQL\Create_Company_Table.sql
+		SQL\Create_External_DB_User_and_Group.sql = SQL\Create_External_DB_User_and_Group.sql
+		SQL\Create_Person_Table.sql = SQL\Create_Person_Table.sql
+		SQL\Select_Companies.sql = SQL\Select_Companies.sql
+		SQL\Select_People.sql = SQL\Select_People.sql
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LargeBlobBuilder", "LargeBlobBuilder\LargeBlobBuilder.csproj", "{387D451D-3BE4-4E29-99AD-6713C9A0B112}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MockData", "MockData", "{C98B1966-2749-4C6A-ADA9-8A791C413423}"
+	ProjectSection(SolutionItems) = preProject
+		MockData\food.txt = MockData\food.txt
+		MockData\MOCK_COMPANY_DATA.csv = MockData\MOCK_COMPANY_DATA.csv
+		MockData\MOCK_PERSON_DATA.csv = MockData\MOCK_PERSON_DATA.csv
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DED55AE8-47C2-44E5-9A8B-2BC022CF9751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DED55AE8-47C2-44E5-9A8B-2BC022CF9751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DED55AE8-47C2-44E5-9A8B-2BC022CF9751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DED55AE8-47C2-44E5-9A8B-2BC022CF9751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{387D451D-3BE4-4E29-99AD-6713C9A0B112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{387D451D-3BE4-4E29-99AD-6713C9A0B112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{387D451D-3BE4-4E29-99AD-6713C9A0B112}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{387D451D-3BE4-4E29-99AD-6713C9A0B112}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F870C85B-5D94-4B5B-8F40-B483472A9361}
+	EndGlobalSection
+EndGlobal
