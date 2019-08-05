@@ -22,7 +22,7 @@ namespace LargeBlobBuilder
 
         public string State { get; set; }
 
-        public int PostalCode { get; set; }
+        public string PostalCode { get; set; }
 
         public string AnimalName { get; set; }
 

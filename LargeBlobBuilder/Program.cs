@@ -34,6 +34,9 @@ namespace LargeBlobBuilder
 
                 var list = new List<Company>();
 
+                // Register data mapper
+                csvReader.Configuration.RegisterClassMap<CompanyMap>();
+
                 // Retrieve company list
                 var records = csvReader.GetRecords<Company>();
 
@@ -82,33 +85,33 @@ namespace LargeBlobBuilder
             var company = new Company();
 
             company.CompanyId = item.CompanyId;
-            company.CompanyName = item.CompanyName;
-            company.Description = item.Description;
-            company.EmailAddress = item.EmailAddress;
-            company.StreetAddress = item.StreetAddress;
-            company.City = item.City;
-            company.State = item.State;
-            company.PostalCode = item.PostalCode;
-            company.AnimalName = item.AnimalName;
-            company.AnimalScientificName = item.AnimalScientificName;
-            company.AppName = item.AppName;
-            company.BuzzWord = item.BuzzWord;
-            company.CarMake = item.CarMake;
-            company.CarModel = item.CarModel;
-            company.CarVin = item.CarVin;
-            company.CatchPhrase = item.CatchPhrase;
-            company.DomainName = item.DomainName;
-            company.ContactFirstName = item.ContactFirstName;
-            company.ContactLastName = item.ContactLastName;
-            company.JobTitle = item.JobTitle;
-            company.Language = item.Language;
-            company.Skill = item.Skill;
+            company.CompanyName = item.CompanyName.Length <= 50 ? item.CompanyName : item.CompanyName.Substring(0, 50).Trim();
+            company.Description = item.Description.Length <= 1000 ? item.Description : item.Description.Substring(0, 1000).Trim();
+            company.EmailAddress = item.EmailAddress.Length <= 255 ? item.EmailAddress : item.EmailAddress.Substring(0, 255).Trim();
+            company.StreetAddress = item.StreetAddress.Length <= 50 ? item.StreetAddress : item.StreetAddress.Substring(0, 50).Trim();
+            company.City = item.City.Length <= 30 ? item.City : item.City.Substring(0, 30).Trim();
+            company.State = item.State.Length <= 30 ? item.State: item.State.Substring(0, 30).Trim();
+            company.PostalCode = item.PostalCode.Length <= 10 ? item.PostalCode : item.PostalCode.Substring(0, 10).Trim();
+            company.AnimalName = item.AnimalName.Length <= 50 ? item.AnimalName : item.AnimalName.Substring(0, 50).Trim();
+            company.AnimalScientificName = item.AnimalScientificName.Length <= 60 ? item.AnimalScientificName : item.AnimalScientificName.Substring(0, 60).Trim();
+            company.AppName = item.AppName.Length <= 30 ? item.AppName : item.AppName.Substring(0, 30).Trim();
+            company.BuzzWord = item.BuzzWord.Length <= 30 ? item.BuzzWord : item.BuzzWord.Substring(0, 30).Trim();
+            company.CarMake = item.CarMake.Length <= 20 ? item.CarMake : item.CarMake.Substring(0, 20).Trim();
+            company.CarModel = item.CarModel.Length <= 20 ? item.CarModel : item.CarModel.Substring(0, 20).Trim();
+            company.CarVin = item.CarVin.Length <= 20 ? item.CarVin : item.CarVin.Substring(0, 20).Trim();
+            company.CatchPhrase = item.CatchPhrase.Length <= 60 ? item.CatchPhrase : item.CatchPhrase.Substring(0, 60).Trim();
+            company.DomainName = item.DomainName.Length <= 30 ? item.DomainName :item.DomainName.Substring(0, 30).Trim();
+            company.ContactFirstName = item.ContactFirstName.Length <= 30 ? item.ContactFirstName : item.ContactFirstName.Substring(0, 30).Trim();
+            company.ContactLastName = item.ContactLastName.Length <= 30 ? item.ContactLastName : item.ContactLastName.Substring(0, 30).Trim();
+            company.JobTitle = item.JobTitle.Length <= 50 ? item.JobTitle : item.JobTitle.Substring(0, 50).Trim();
+            company.Language = item.Language.Length <= 25 ? item.Language : item.Language.Substring(0, 25).Trim();
+            company.Skill = item.Skill.Length <= 40 ? item.Skill : item.Skill.Substring(0, 40).Trim();
             company.Longitude = item.Longitude;
             company.Latitude = item.Latitude;
-            company.Phone = item.Phone;
-            company.Product = item.Product;
-            company.TimeZone = item.TimeZone;
-            company.Notes = item.Notes;
+            company.Phone = item.Phone.Length <= 12 ? item.Phone : item.Phone.Substring(0, 12).Trim();
+            company.Product = item.Product.Length <= 50 ? item.Product : item.Product.Substring(0, 50).Trim();
+            company.TimeZone = item.TimeZone.Length <= 30 ? item.TimeZone : item.TimeZone.Substring(0, 30).Trim();
+            company.Notes = item.Notes.Length <= 1000 ? item.Notes : item.Notes.Substring(0, 1000).Trim();
 
             return company;
         }
@@ -128,6 +131,9 @@ namespace LargeBlobBuilder
                 csvReader.Configuration.HasHeaderRecord = true; // Ensure a header row exists
 
                 var list = new List<Person>();
+
+                // Register data mapper
+                csvReader.Configuration.RegisterClassMap<PersonMap>();
 
                 // Retrieve person list
                 var records = csvReader.GetRecords<Person>();
